@@ -24,8 +24,8 @@ func main() {
 			continue
 		}
 
-		normalizeUrl := strings.Split("#", u.String())[0]
-		normalizeUrl = strings.Split("?", normalizeUrl)[0]
+		normalizeUrl := strings.Split(u.String(), "#")[0]
+		normalizeUrl = strings.Split(normalizeUrl, "?")[0]
 		normalizeUrl = hexRouteArg.ReplaceAllString(normalizeUrl, "_")
 		normalizeUrl = intRouteArg.ReplaceAllString(normalizeUrl, "_")
 
